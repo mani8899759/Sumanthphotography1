@@ -85,7 +85,8 @@ export const siteContent = {
     { name: "BABY BUMP SHOOTS", path: "/baby-maternity" },
     { name: "OTHERS", path: "/birthdays-events" },
     { name: "ABOUT", path: "/about" },
-    { name: "CONTACT", path: "/contact" }
+    { name: "CONTACT", path: "/contact" },
+    { name: "BUILD YOUR QUOTE →", path: "/build-your-quote" }
   ],
 
   hero: {

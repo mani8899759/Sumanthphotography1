@@ -44,3 +44,59 @@
   letter-spacing: 0.05em;
   transform: translateY(-2px);
 }
+
+/* ============================================================
+   QUOTE BUILDER — Custom Animations
+   ============================================================ */
+
+/* Camera shutter flash */
+@keyframes shutter-flash {
+  0%   { opacity: 0; }
+  30%  { opacity: 0.75; }
+  100% { opacity: 0; }
+}
+
+.shutter-flash {
+  animation: shutter-flash 0.35s ease-out forwards;
+}
+
+/* Checkmark SVG draw animation */
+@keyframes check-draw {
+  from { stroke-dashoffset: 20; }
+  to   { stroke-dashoffset: 0; }
+}
+
+.check-draw path {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  animation: check-draw 0.3s ease-out forwards 0.05s;
+}
+
+/* Number slide transition */
+@keyframes num-slide-up {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes num-slide-down {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Quote builder page — force white text-black on the white sections */
+.quote-page-white {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+/* Reduced motion: simplify all animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

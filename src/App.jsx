@@ -12,6 +12,7 @@ import { OthersPage } from './pages/OthersPage';
 import { CategoryGalleryPage } from './pages/CategoryGalleryPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import { QuoteBuilderPage } from './pages/QuoteBuilderPage';
 
 // Helper to reset scroll position on route change
 const ScrollToTop = () => {
@@ -48,6 +49,9 @@ const AnimatedRoutes = () => {
         {/* Master Content Pages */}
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
+
+        {/* Quote Builder */}
+        <Route path="/build-your-quote" element={<QuoteBuilderPage />} />
       </Routes>
     </AnimatePresence>
   );
