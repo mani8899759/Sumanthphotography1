@@ -1,0 +1,222 @@
+[
+  {
+    "id": "engagement-1",
+    "src": "/assets/engagement/engagement_01.jpg",
+    "width": 2200,
+    "height": 1467,
+    "ratio": "landscape",
+    "aspectRatio": 1.4993,
+    "caption": "Ring Exchange & Intimate Promises \u2014 Frame 01",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 1"
+  },
+  {
+    "id": "engagement-2",
+    "src": "/assets/engagement/engagement_02.jpg",
+    "width": 2200,
+    "height": 1467,
+    "ratio": "landscape",
+    "aspectRatio": 1.4993,
+    "caption": "Warm Family Blessings & Celebrations \u2014 Frame 02",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 2"
+  },
+  {
+    "id": "engagement-3",
+    "src": "/assets/engagement/engagement_03.jpg",
+    "width": 1467,
+    "height": 2200,
+    "ratio": "portrait",
+    "aspectRatio": 0.667,
+    "caption": "Editorial Engagement Portrait \u2014 Frame 03",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 3"
+  },
+  {
+    "id": "engagement-4",
+    "src": "/assets/engagement/engagement_04.jpg",
+    "width": 1467,
+    "height": 2200,
+    "ratio": "portrait",
+    "aspectRatio": 0.667,
+    "caption": "Spontaneous Laughter & Joyful Moments \u2014 Frame 04",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 4"
+  },
+  {
+    "id": "engagement-5",
+    "src": "/assets/engagement/engagement_05.jpg",
+    "width": 1467,
+    "height": 2200,
+    "ratio": "portrait",
+    "aspectRatio": 0.667,
+    "caption": "Heritage Architecture & Couple Bond \u2014 Frame 05",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 5"
+  },
+  {
+    "id": "engagement-6",
+    "src": "/assets/engagement/engagement_06.jpg",
+    "width": 2200,
+    "height": 1467,
+    "ratio": "landscape",
+    "aspectRatio": 1.4993,
+    "caption": "Intricate Henna Details \u2014 Frame 06",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 6"
+  },
+  {
+    "id": "engagement-7",
+    "src": "/assets/engagement/engagement_07.jpg",
+    "width": 2200,
+    "height": 1467,
+    "ratio": "landscape",
+    "aspectRatio": 1.4993,
+    "caption": "Closing Romantic Embrace \u2014 Frame 07",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 7"
+  },
+  {
+    "id": "engagement-8",
+    "src": "/assets/engagement/engagement_08.jpg",
+    "width": 2200,
+    "height": 1467,
+    "ratio": "landscape",
+    "aspectRatio": 1.4993,
+    "caption": "Ring Exchange & Intimate Promises \u2014 Frame 08",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 8"
+  },
+  {
+    "id": "engagement-9",
+    "src": "/assets/engagement/engagement_09.jpg",
+    "width": 1467,
+    "height": 2200,
+    "ratio": "portrait",
+    "aspectRatio": 0.667,
+    "caption": "Warm Family Blessings & Celebrations \u2014 Frame 09",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 9"
+  },
+  {
+    "id": "engagement-10",
+    "src": "/assets/engagement/engagement_10.jpg",
+    "width": 2200,
+    "height": 1467,
+    "ratio": "landscape",
+    "aspectRatio": 1.4993,
+    "caption": "Editorial Engagement Portrait \u2014 Frame 10",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 10"
+  },
+  {
+    "id": "engagement-11",
+    "src": "/assets/engagement/engagement_11.jpg",
+    "width": 2200,
+    "height": 1467,
+    "ratio": "landscape",
+    "aspectRatio": 1.4993,
+    "caption": "Spontaneous Laughter & Joyful Moments \u2014 Frame 11",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 11"
+  },
+  {
+    "id": "engagement-12",
+    "src": "/assets/engagement/engagement_12.jpg",
+    "width": 1467,
+    "height": 2200,
+    "ratio": "portrait",
+    "aspectRatio": 0.667,
+    "caption": "Heritage Architecture & Couple Bond \u2014 Frame 12",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 12"
+  },
+  {
+    "id": "engagement-13",
+    "src": "/assets/engagement/engagement_13.jpg",
+    "width": 1467,
+    "height": 2200,
+    "ratio": "portrait",
+    "aspectRatio": 0.667,
+    "caption": "Intricate Henna Details \u2014 Frame 13",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 13"
+  },
+  {
+    "id": "engagement-14",
+    "src": "/assets/engagement/engagement_14.jpg",
+    "width": 1467,
+    "height": 2200,
+    "ratio": "portrait",
+    "aspectRatio": 0.667,
+    "caption": "Closing Romantic Embrace \u2014 Frame 14",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 14"
+  },
+  {
+    "id": "engagement-15",
+    "src": "/assets/engagement/engagement_15.jpg",
+    "width": 2200,
+    "height": 1467,
+    "ratio": "landscape",
+    "aspectRatio": 1.4993,
+    "caption": "Ring Exchange & Intimate Promises \u2014 Frame 15",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 15"
+  },
+  {
+    "id": "engagement-16",
+    "src": "/assets/engagement/engagement_16.jpg",
+    "width": 1467,
+    "height": 2200,
+    "ratio": "portrait",
+    "aspectRatio": 0.667,
+    "caption": "Warm Family Blessings & Celebrations \u2014 Frame 16",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 16"
+  },
+  {
+    "id": "engagement-17",
+    "src": "/assets/engagement/engagement_17.jpg",
+    "width": 2200,
+    "height": 1467,
+    "ratio": "landscape",
+    "aspectRatio": 1.4993,
+    "caption": "Editorial Engagement Portrait \u2014 Frame 17",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 17"
+  },
+  {
+    "id": "engagement-18",
+    "src": "/assets/engagement/engagement_18.jpg",
+    "width": 1467,
+    "height": 2200,
+    "ratio": "portrait",
+    "aspectRatio": 0.667,
+    "caption": "Spontaneous Laughter & Joyful Moments \u2014 Frame 18",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 18"
+  },
+  {
+    "id": "engagement-19",
+    "src": "/assets/engagement/engagement_19.jpg",
+    "width": 1467,
+    "height": 2200,
+    "ratio": "portrait",
+    "aspectRatio": 0.667,
+    "caption": "Heritage Architecture & Couple Bond \u2014 Frame 19",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 19"
+  },
+  {
+    "id": "engagement-20",
+    "src": "/assets/engagement/engagement_20.jpg",
+    "width": 2200,
+    "height": 1467,
+    "ratio": "landscape",
+    "aspectRatio": 1.4993,
+    "caption": "Intricate Henna Details \u2014 Frame 20",
+    "categoryName": "ENGAGEMENT",
+    "alt": "Engagement photography moment 20"
+  }
+]
