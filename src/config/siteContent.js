@@ -148,6 +148,46 @@ export const siteContent = {
     titleLine2: "Photography",
     subheading: "Fine art & documentary photography studio based in Hyderabad, India.",
     heroImage: "/assets/about_photographer.jpg",
+    awardsImage: "/assets/awards/06.jpg",
+    awardsTeamImage: "/assets/awards/IMG_2964.jpg",
+    awards: [
+      {
+        id: "award-1",
+        src: "/assets/awards/06.jpg",
+        title: "BEST PHOTO STORY AWARD",
+        subtitle: "Telangana Photography Akademi"
+      },
+      {
+        id: "award-2",
+        src: "/assets/awards/IMG_2964.jpg",
+        title: "STUDIO RECOGNITION",
+        subtitle: "Sumanth Photography Crew & Golden Trophy"
+      },
+      {
+        id: "award-3",
+        src: "/assets/awards/01.jpg",
+        title: "NATIONAL WORKSHOP AWARD",
+        subtitle: "5th National Level Photography Convention"
+      },
+      {
+        id: "award-4",
+        src: "/assets/awards/08.jpg",
+        title: "STATE LEVEL PHOTOGRAPHY AWARD",
+        subtitle: "Certificate of Excellence"
+      },
+      {
+        id: "award-5",
+        src: "/assets/awards/09.jpg",
+        title: "HONOR & RECOGNITION PLAQUE",
+        subtitle: "Special Achievement Felicitation"
+      },
+      {
+        id: "award-6",
+        src: "/assets/awards/05.jpg",
+        title: "KHAMMAM PHOTO ARTS AWARD",
+        subtitle: "Photography Excellence Workshop"
+      }
+    ],
     approachHeading: "THE WAY WE SEE STORIES",
     approachBody1: "At Sumanth Photography, we believe photography is an exercise in presence. Our work balances a documentary approach with a fine-art sensibility—capturing candid emotions as they unfold without intrusive direction.",
     approachBody2: "Based in Hyderabad, India, our team collaborates with clients across the globe. Whether documenting a heritage wedding, an intimate maternity milestone, or a commercial brand campaign, we approach every assignment with quiet discipline, aesthetic precision, and deep respect for the moment.",
