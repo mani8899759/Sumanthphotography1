@@ -104,6 +104,8 @@ export const siteContent = {
     body: "The Studio specialises in creating High Quality Imagery for Products and People for both Commercial and Individual use. Our Team includes Photographers, In-house Image Editor and we have relationships with Stylists, Make-up Artists, Models and Actors to provide complete Photo Production Services. We have developed extensive skills and an understanding of the photographic needs in the city, having served thousands of clients over the years. Currently, SUMANTH PHOTOGRAPHY is a small yet fast-growing business that focuses on a niche market in the photography industry. We specialize in producing high-quality imagery for brands, products, and individuals."
   },
 
+  aboutFeatureImage: "/assets/about_feature.jpg",
+
   portrait: {
     heading: "Portrait Photography",
     text1: "We offer portrait and headshot photography services for both individuals and organizations.",
@@ -148,7 +150,8 @@ export const siteContent = {
     titleLine1: "About Sumanth",
     titleLine2: "Photography",
     subheading: "Fine art & documentary photography studio based in Hyderabad, India.",
-    heroImage: "/assets/about_photographer.jpg",
+    heroImage: "/assets/about_feature.jpg",
+    featureImage: "/assets/about_feature.jpg",
     awardsImage: "/assets/awards/06.jpg",
     awardsTeamImage: "/assets/awards/IMG_2964.jpg",
     awards: [
