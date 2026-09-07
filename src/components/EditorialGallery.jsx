@@ -3,7 +3,10 @@ import { motion } from 'framer-motion';
 import { LightboxModal } from './LightboxModal';
 import { CustomCursor } from './CustomCursor';
 
-// Calculate image-aware column spans and aspect ratios for perfect 12-col architectural alignment
+/**
+ * Calculate image-aware column spans and preserve natural aspect ratios
+ * for perfect 12-col architectural alignment across all categories.
+ */
 const calculateImageSpans = (images) => {
   const spans = [];
   let i = 0;
@@ -20,37 +23,37 @@ const calculateImageSpans = (images) => {
 
     // Pattern 1: Three consecutive Portraits -> 4 + 4 + 4 = 12 cols
     if (!isLand && next && !isNextLand && third && !isThirdLand) {
-      spans.push({ colSpan: 'col-span-1 md:col-span-4', aspect: 'aspect-[4/5]' });
-      spans.push({ colSpan: 'col-span-1 md:col-span-4', aspect: 'aspect-[4/5]' });
-      spans.push({ colSpan: 'col-span-1 md:col-span-4', aspect: 'aspect-[4/5]' });
+      spans.push({ colSpan: 'col-span-1 md:col-span-4' });
+      spans.push({ colSpan: 'col-span-1 md:col-span-4' });
+      spans.push({ colSpan: 'col-span-1 md:col-span-4' });
       i += 3;
     }
     // Pattern 2: Portrait + Landscape -> 4 + 8 = 12 cols
     else if (!isLand && next && isNextLand) {
-      spans.push({ colSpan: 'col-span-1 md:col-span-4', aspect: 'aspect-[4/5]' });
-      spans.push({ colSpan: 'col-span-1 md:col-span-8', aspect: 'aspect-[16/9]' });
+      spans.push({ colSpan: 'col-span-1 md:col-span-4' });
+      spans.push({ colSpan: 'col-span-1 md:col-span-8' });
       i += 2;
     }
     // Pattern 3: Landscape + Portrait -> 8 + 4 = 12 cols
     else if (isLand && next && !isNextLand) {
-      spans.push({ colSpan: 'col-span-1 md:col-span-8', aspect: 'aspect-[16/9]' });
-      spans.push({ colSpan: 'col-span-1 md:col-span-4', aspect: 'aspect-[4/5]' });
+      spans.push({ colSpan: 'col-span-1 md:col-span-8' });
+      spans.push({ colSpan: 'col-span-1 md:col-span-4' });
       i += 2;
     }
     // Pattern 4: Two consecutive Landscapes -> 6 + 6 = 12 cols
     else if (isLand && next && isNextLand && (i % 4 === 0)) {
-      spans.push({ colSpan: 'col-span-1 md:col-span-6', aspect: 'aspect-[16/9]' });
-      spans.push({ colSpan: 'col-span-1 md:col-span-6', aspect: 'aspect-[16/9]' });
+      spans.push({ colSpan: 'col-span-1 md:col-span-6' });
+      spans.push({ colSpan: 'col-span-1 md:col-span-6' });
       i += 2;
     }
     // Pattern 5: Solo Featured Landscape -> 12 cols full width
     else if (isLand) {
-      spans.push({ colSpan: 'col-span-1 md:col-span-12', aspect: 'aspect-[16/9]' });
+      spans.push({ colSpan: 'col-span-1 md:col-span-12' });
       i += 1;
     }
     // Pattern 6: Single Portrait -> 4 cols
     else {
-      spans.push({ colSpan: 'col-span-1 md:col-span-4', aspect: 'aspect-[4/5]' });
+      spans.push({ colSpan: 'col-span-1 md:col-span-4' });
       i += 1;
     }
   }
@@ -86,7 +89,13 @@ export const EditorialGallery = ({ images = [] }) => {
       <div className="w-[94vw] max-w-[1600px] mx-auto">
         <div className="editorial-gallery-grid grid grid-cols-1 md:grid-cols-12 gap-3 sm:gap-4 md:gap-5 items-start">
           {images.map((item, idx) => {
-            const spanInfo = spans[idx] || { colSpan: 'col-span-1 md:col-span-4', aspect: 'aspect-[4/5]' };
+            const spanInfo = spans[idx] || { colSpan: 'col-span-1 md:col-span-4' };
+
+            // Determine natural ratio for container style to guarantee 0 cropping/distortion
+            const isLand = item.orientation === 'landscape' || item.ratio === 'landscape' || (item.aspectRatio && item.aspectRatio > 1.1);
+            const naturalRatio = item.aspectRatio
+              ? item.aspectRatio
+              : (item.width && item.height ? item.width / item.height : (isLand ? 1.5 : 0.8));
 
             return (
               <motion.div
@@ -99,7 +108,8 @@ export const EditorialGallery = ({ images = [] }) => {
                   delay: (idx % 3) * 0.08,
                   ease: [0.16, 1, 0.3, 1]
                 }}
-                className={`${spanInfo.colSpan} relative group overflow-hidden bg-neutral-900 cursor-pointer ${spanInfo.aspect}`}
+                className={`${spanInfo.colSpan} relative group overflow-hidden bg-neutral-900 cursor-pointer w-full`}
+                style={{ aspectRatio: `${naturalRatio}` }}
                 onMouseEnter={() => setCursorHovered(true)}
                 onMouseLeave={() => setCursorHovered(false)}
                 onClick={() => handleOpenLightbox(idx)}
@@ -116,7 +126,7 @@ export const EditorialGallery = ({ images = [] }) => {
                 {/* Minimal Subtle Metadata Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-white">
                   <span className="text-[10px] font-mono tracking-widest text-neutral-300 uppercase block mb-1">
-                    {item.categoryName || 'WEDDING'} · FRAME {String(idx + 1).padStart(2, '0')} OF {images.length}
+                    {item.categoryName || 'EVENTS'} · FRAME {String(idx + 1).padStart(2, '0')} OF {images.length}
                   </span>
                   <h4 className="text-xs sm:text-sm font-semibold leading-tight">
                     {item.caption || item.alt}
