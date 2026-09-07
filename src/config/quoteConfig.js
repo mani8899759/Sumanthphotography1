@@ -288,3 +288,15 @@ export const formatPrice = (amount) => {
     maximumFractionDigits: 0,
   }).format(amount);
 };
+
+// ----------------------------------------------------------
+// QUOTE PAGE ISOLATED COVER CONFIGURATION
+// ----------------------------------------------------------
+export const quotePageConfig = {
+  coverImage: '/assets/quote_cover.jpg',
+  coverAlt: 'Build Your Photography Quote — Sumanth Photography',
+  imageWidth: 1024,
+  imageHeight: 805,
+  aspectRatio: 1024 / 805,
+};
+

@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { PageTransition } from '../components/PageTransition';
 import { QuoteBuilder } from '../components/quote/QuoteBuilder';
-import { brandConfig } from '../config/quoteConfig';
+import { AdaptiveCoverImage } from '../components/quote/AdaptiveCoverImage';
+import { brandConfig, quotePageConfig } from '../config/quoteConfig';
 import { siteContent } from '../config/siteContent';
 
 // ============================================================
@@ -91,39 +92,14 @@ export const QuoteBuilderPage = () => {
               No commitment, just clarity.
             </motion.p>
 
-            {/* Hero image */}
-            <motion.div
-              initial={{ opacity: 0, scale: 1.02 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative overflow-hidden rounded-3xl"
-              style={{ aspectRatio: '21/9' }}
-            >
-              <img
-                src={siteContent.weddings.heroImage}
-                alt="Premium wedding photography by Sumanth Photography"
-                className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-[1.02]"
-                loading="eager"
-                style={{ filter: 'brightness(0.95) contrast(1.04) saturate(1.05)' }}
-              />
-              {/* Subtle cinematic overlay */}
-              <div
-                className="absolute inset-0 rounded-3xl"
-                style={{
-                  background: 'linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.3) 100%)',
-                  pointerEvents: 'none',
-                }}
-              />
-              {/* Caption overlay */}
-              <div className="absolute bottom-5 left-6 right-6 flex items-end justify-between">
-                <span className="text-white/80 text-[11px] font-semibold uppercase tracking-wider">
-                  Premium Wedding Photography · Hyderabad
-                </span>
-                <span className="bg-white/10 backdrop-blur-sm border border-white/20 text-white text-[11px] font-bold px-3 py-1 rounded-full">
-                  📸 500+ Weddings Documented
-                </span>
-              </div>
-            </motion.div>
+            {/* Hero image — Adaptive Aspect Ratio Cover */}
+            <AdaptiveCoverImage
+              src={quotePageConfig.coverImage}
+              alt={quotePageConfig.coverAlt}
+              initialAspectRatio={quotePageConfig.aspectRatio}
+              captionLeft="PREMIUM WEDDING PHOTOGRAPHY · HYDERABAD"
+              captionRight="📸 500+ WEDDINGS DOCUMENTED"
+            />
           </div>
         </section>
 
