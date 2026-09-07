@@ -74,12 +74,12 @@ export const FeaturedShowcase = () => {
 
   return (
     <section className="w-full bg-white text-black py-20 lg:py-28 px-4 sm:px-8 border-t border-neutral-100 select-none">
-      
+
       {/* Floating Custom VIEW Cursor Badge */}
       <CustomCursor isHovered={cursorHovered} text="VIEW" />
 
       <div className="w-[92vw] max-w-[1500px] mx-auto flex flex-col">
-        
+
         {/* SECTION HEADING & SUBTITLE - Aligned to Container Left Edge */}
         <ScrollReveal className="text-left mb-12 sm:mb-16 space-y-3">
           <h2 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-black tracking-tight leading-none uppercase">
@@ -91,7 +91,7 @@ export const FeaturedShowcase = () => {
         </ScrollReveal>
 
         {/* 15-IMAGE 12-COLUMN STRICT EDITORIAL GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-[12px] items-stretch mb-20">
+        <div className="featured-showcase-grid grid grid-cols-1 md:grid-cols-12 gap-[12px] items-stretch mb-20">
           {featuredMoments.map((item, idx) => {
             const layout = gridLayouts[idx] || { colSpan: 'col-span-1 md:col-span-4', aspectRatio: 'aspect-[4/5]' };
 

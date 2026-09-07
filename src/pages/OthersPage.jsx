@@ -30,7 +30,7 @@ export const OthersPage = () => {
         <div className="max-w-7xl mx-auto space-y-20">
           {subcategories.map((sub, idx) => (
             <div key={sub.id} className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-              
+
               <div className={`lg:col-span-7 ${idx % 2 === 1 ? 'lg:order-2' : ''} w-full h-[360px] sm:h-[480px] overflow-hidden bg-neutral-100`}>
                 <ImageReveal className="w-full h-full">
                   <Link to={sub.path} className="block w-full h-full group">

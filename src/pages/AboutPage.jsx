@@ -35,7 +35,7 @@ const AwardShowcaseSlider = ({ awards }) => {
 
   return (
     <>
-      <div 
+      <div
         className="w-full h-full relative group overflow-hidden bg-neutral-900 cursor-pointer select-none"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
@@ -99,9 +99,8 @@ const AwardShowcaseSlider = ({ awards }) => {
                 setCurrentIndex(idx);
               }}
               aria-label={`Go to award image ${idx + 1}`}
-              className={`h-1.5 transition-all duration-300 rounded-full ${
-                idx === currentIndex ? 'w-5 bg-white' : 'w-1.5 bg-white/40 hover:bg-white/70'
-              }`}
+              className={`h-1.5 transition-all duration-300 rounded-full ${idx === currentIndex ? 'w-5 bg-white' : 'w-1.5 bg-white/40 hover:bg-white/70'
+                }`}
             />
           ))}
         </div>
@@ -132,7 +131,7 @@ export const AboutPage = () => {
       {/* HERO SECTION */}
       <section className="w-full bg-white text-black overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[580px] lg:min-h-[680px] w-full">
-          
+
           <div className="lg:col-span-7 relative w-full h-[420px] lg:h-auto overflow-hidden bg-neutral-100">
             <ImageReveal className="w-full h-full">
               <img

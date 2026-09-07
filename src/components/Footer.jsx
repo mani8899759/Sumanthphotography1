@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <footer className="bg-black text-white pt-16 pb-20 px-6 w-full border-t border-neutral-900">
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-10">
-        
+
         {/* Studio Branding */}
         <ScrollReveal className="space-y-2">
           <h3 className="text-sm font-extrabold uppercase tracking-widest text-white">
@@ -33,7 +33,7 @@ export const Footer = () => {
           <p className="font-medium text-white">{siteContent.footer.location}</p>
           <p>Phone: <a href={`tel:${siteContent.footer.phone.replace(/[^0-9+]/g, '')}`} className="hover:text-white transition-colors">{siteContent.footer.phone}</a></p>
           <p>Email: <a href={`mailto:${siteContent.footer.email}`} className="hover:text-white transition-colors">{siteContent.footer.email}</a></p>
-          
+
           {/* Social Minimal Line Icons */}
           <div className="flex items-center justify-center gap-4 pt-3">
             {/* Instagram Icon */}

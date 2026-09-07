@@ -84,7 +84,7 @@ export const EditorialGallery = ({ images = [] }) => {
 
       {/* 94vw Viewport Container with 1600px Max-Width */}
       <div className="w-[94vw] max-w-[1600px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-3 sm:gap-4 md:gap-5 items-start">
+        <div className="editorial-gallery-grid grid grid-cols-1 md:grid-cols-12 gap-3 sm:gap-4 md:gap-5 items-start">
           {images.map((item, idx) => {
             const spanInfo = spans[idx] || { colSpan: 'col-span-1 md:col-span-4', aspect: 'aspect-[4/5]' };
 

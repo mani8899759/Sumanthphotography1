@@ -77,9 +77,8 @@ export const categoryTree = {
     parentPath: "/birthdays-events",
     subcategories: [
       { id: "birthdays", name: "BIRTHDAYS", path: "/birthdays-events/birthdays", heroImage: "/assets/hero_model.jpg", desc: "Milestone birthday galas, cake cutting moments, and spontaneous party cheer." },
-      { id: "events", name: "EVENTS", path: "/birthdays-events/events", heroImage: "/assets/wedding_reception.jpg", desc: "High-profile corporate galas, keynotes, stage performances, and cultural events." },
-      { id: "portraits", name: "PORTRAITS", path: "/birthdays-events/portraits", heroImage: "/assets/about_photographer.jpg", desc: "Fine-art personal branding, executive headshots, and creative beauty portraits." },
-      { id: "celebrations", name: "OTHER CELEBRATIONS", path: "/birthdays-events/celebrations", heroImage: "/assets/wedding_ritual.jpg", desc: "Anniversaries, housewarmings, graduations, and multigenerational reunions." }
+      { id: "events", name: "EVENTS", path: "/birthdays-events/events", heroImage: "/assets/events_cover.jpg", desc: "High-profile corporate galas, keynotes, stage performances, and cultural events." },
+      { id: "celebrations", name: "OTHER CELEBRATIONS", path: "/birthdays-events/celebrations", heroImage: "/assets/celebrations_cover.jpg", desc: "Anniversaries, housewarmings, graduations, and multigenerational reunions." }
     ]
   }
 };
@@ -125,6 +124,8 @@ const eventCaptions = [
 import preWeddingItems from './preWeddingItems.json';
 import weddingCeremonyItems from './weddingCeremonyItems.json';
 import engagementItems from './engagementItems.json';
+import eventsItems from './eventsItems.json';
+import celebrationsItems from './celebrationsItems.json';
 
 // Populate items per subcategory
 export const galleryData = {
@@ -140,9 +141,10 @@ export const galleryData = {
   "baby-shower": buildSubcategoryItems("Baby / Maternity", "baby-shower", "maternity", maternityCaptions),
   "newborn": buildSubcategoryItems("Baby / Maternity", "newborn", "maternity", maternityCaptions),
 
-  // OTHERS SUBCATEGORIES (128 images)
+  // OTHERS SUBCATEGORIES
   "birthdays": buildSubcategoryItems("Others", "birthdays", "birthdays", birthdayCaptions),
-  "events": buildSubcategoryItems("Others", "events", "events", eventCaptions),
-  "portraits": buildSubcategoryItems("Others", "portraits", "birthdays", birthdayCaptions),
-  "celebrations": buildSubcategoryItems("Others", "celebrations", "events", eventCaptions)
+  // EVENTS: Real curated gallery — 56 unique photographs from the Events folder
+  // events_cover.jpg is NOT included here; it is stored separately as heroImage in categoryTree.others
+  "events": eventsItems,
+  "celebrations": celebrationsItems
 };

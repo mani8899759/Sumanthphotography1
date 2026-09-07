@@ -49,7 +49,7 @@ export const ContactPage = () => {
       {/* CONTACT INFO & FORM SECTION */}
       <section className="w-full bg-white text-black py-20 px-6 sm:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
-          
+
           {/* Left Column: Contact Information */}
           <div className="lg:col-span-4 space-y-10">
             <ScrollReveal className="space-y-2">

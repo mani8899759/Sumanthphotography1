@@ -8,7 +8,10 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  h1, h2, h3, .heading-editorial {
+  h1,
+  h2,
+  h3,
+  .heading-editorial {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
     letter-spacing: -0.04em;
@@ -51,9 +54,17 @@
 
 /* Camera shutter flash */
 @keyframes shutter-flash {
-  0%   { opacity: 0; }
-  30%  { opacity: 0.75; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .shutter-flash {
@@ -62,8 +73,13 @@
 
 /* Checkmark SVG draw animation */
 @keyframes check-draw {
-  from { stroke-dashoffset: 20; }
-  to   { stroke-dashoffset: 0; }
+  from {
+    stroke-dashoffset: 20;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .check-draw path {
@@ -74,13 +90,27 @@
 
 /* Number slide transition */
 @keyframes num-slide-up {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes num-slide-down {
-  from { opacity: 0; transform: translateY(-6px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Quote builder page — force white text-black on the white sections */
@@ -91,6 +121,7 @@
 
 /* Reduced motion: simplify all animations */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   ::before,
   ::after {
@@ -98,5 +129,183 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   MOBILE RESPONSIVE — @media (max-width: 767px) ONLY
+   Desktop layout is NOT touched below this line.
+   ============================================================ */
+
+@media (max-width: 767px) {
+
+  /* ── Global overflow guard ──────────────────────────────── */
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  /* ── Hero Section — mobile stack ───────────────────────── */
+  /* 
+     HeroSection.jsx has:
+       grid grid-cols-1 lg:grid-cols-12 → already single col on mobile ✓
+       Left col: h-[380px] sm:h-[480px] lg:h-auto → fine on mobile ✓
+       Right col: video square max-w-[440px] aspect-square
+     On mobile we make the video smaller and contained. 
+  */
+  .hero-video-container {
+    max-width: 280px !important;
+  }
+
+  /* ── FeaturedShowcase — gallery mobile ─────────────────── */
+  /*
+     FeaturedShowcase uses: grid-cols-1 md:grid-cols-12 gap-[12px]
+     On mobile grid-cols-1 means each item is full width already.
+     The aspect ratios are: aspect-[4/5] and aspect-[16/9]
+     Force a consistent, tall portrait ratio on mobile for all items.
+  */
+  .featured-showcase-grid > * {
+    aspect-ratio: 4/5 !important;
+  }
+
+  /* ── EditorialGallery — gallery mobile ─────────────────── */
+  /*
+     EditorialGallery uses: grid-cols-1 md:grid-cols-12 gap-3 sm:gap-4 md:gap-5
+     Force portrait aspect on all gallery items on mobile.
+  */
+  .editorial-gallery-grid > * {
+    aspect-ratio: 4/5 !important;
+  }
+
+  /* ── FeaturedShowcase heading ───────────────────────────── */
+  /* SELECTED MOMENTS — h2 is text-4xl sm:text-6xl lg:text-7xl on desktop. On mobile keep 2.25rem (text-4xl) */
+
+  /* ── Section Padding Reduction ─────────────────────────── */
+  /* Reduce excessive section padding on mobile */
+  section.mobile-py-reduce {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* ── Contact Page — form stacks ───────────────────────── */
+  /* Already grid-cols-1 sm:grid-cols-2 so it stacks on mobile. Just ensure gap is comfortable */
+
+  /* ── About Page — stats grid ──────────────────────────── */
+  /* Already grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 — stacks on mobile ✓ */
+
+  /* ── WeddingPage — subcategory cards ─────────────────── */
+  /* Already grid-cols-1 lg:grid-cols-12 → stacks on mobile ✓ */
+  /* Reduce image height on mobile */
+  .wedding-preview-img {
+    height: 280px !important;
+  }
+
+  /* ── SubCategoryNav — horizontal pill nav ─────────────── */
+  /* Make subcategory nav scrollable horizontally on mobile */
+  .subcategory-nav-wrapper {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    padding-bottom: 8px;
+  }
+
+  .subcategory-nav-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .subcategory-nav-wrapper > * {
+    flex-wrap: nowrap !important;
+    white-space: nowrap;
+  }
+
+  /* ── Footer — keep centered, reduce top padding ────────── */
+  footer {
+    padding-top: 3rem !important;
+  }
+
+  /* ── IntroSection copy — increase line height ──────────── */
+  /* Already uses small font sizes, fine */
+
+  /* ── Lightbox — full-screen on mobile ─────────────────── */
+  /* Fixed inset-0 already handles this ✓ */
+
+  /* ── PrintingSection — stack properly ─────────────────── */
+  /* Uses grid-cols-1 lg:grid-cols-12 already ✓ */
+
+  /* ── PortraitSection — stack properly ─────────────────── */
+  /* Uses grid-cols-1 md:grid-cols-2 already ✓ */
+
+  /* ── QuotePage — multi-step form ─────────────────────── */
+  /* Grid and flex layouts with gap — usually already responsive */
+  /* Ensure option cards are large enough to tap */
+  .quote-option-card {
+    min-height: 80px;
+    padding: 1rem !important;
+  }
+
+  /* ── Category gallery page — header padding ──────────── */
+  .category-page-hero {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* ── General container overflow protection ───────────── */
+  [class*="max-w-"] {
+    max-width: 100% !important;
+  }
+
+  /* ── w-[94vw] / w-[92vw] containers ─────────────────── */
+  [class*="w-[9"] {
+    width: 100% !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* ── Prevent long words overflow ─────────────────────── */
+  h1, h2, h3, h4, p, span, label {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* ── Mobile-specific touch improvements ──────────────── */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* But allow small inline badges to stay small */
+  .font-mono.tracking-widest,
+  span.font-mono {
+    min-height: unset;
+    min-width: unset;
+  }
+}
+
+/* ── Extra small screens (320px-359px) ──────────────────────── */
+@media (max-width: 359px) {
+  /* Tighten letter-spacing on very small screens */
+  h1 {
+    font-size: clamp(1.6rem, 8vw, 2.25rem) !important;
+    letter-spacing: -0.03em !important;
+  }
+
+  h2 {
+    font-size: clamp(1.4rem, 7vw, 2rem) !important;
+  }
+
+  /* Reduce horizontal padding on tiny screens */
+  section {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
   }
 }

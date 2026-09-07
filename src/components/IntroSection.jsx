@@ -6,7 +6,7 @@ export const IntroSection = () => {
   return (
     <section className="bg-black text-white py-16 sm:py-24 lg:py-28 px-6 sm:px-12 w-full border-t border-neutral-900">
       <div className="max-w-4xl mx-auto text-center">
-        
+
         {/* Short Introductory Statement */}
         <ScrollReveal>
           <h2 className="text-sm sm:text-base md:text-lg font-semibold tracking-normal text-white mb-6">

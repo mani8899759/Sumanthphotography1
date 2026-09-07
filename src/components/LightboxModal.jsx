@@ -1,7 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const LightboxModal = ({ isOpen, currentIndex, images, onClose, onPrev, onNext }) => {
+  // Touch swipe state
+  const touchStartX = useRef(null);
+  const touchStartY = useRef(null);
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!isOpen) return;
@@ -14,9 +18,37 @@ export const LightboxModal = ({ isOpen, currentIndex, images, onClose, onPrev, o
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose, onPrev, onNext]);
 
+  // Lock body scroll while open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [isOpen]);
+
   if (!isOpen || !images || images.length === 0) return null;
 
   const currentImg = images[currentIndex] || images[0];
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    const dy = e.changedTouches[0].clientY - touchStartY.current;
+    // Only trigger horizontal swipe (ignore mostly-vertical scrolls)
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+      if (dx < 0) onNext();
+      else onPrev();
+    }
+    touchStartX.current = null;
+    touchStartY.current = null;
+  };
 
   return (
     <AnimatePresence>
@@ -27,6 +59,8 @@ export const LightboxModal = ({ isOpen, currentIndex, images, onClose, onPrev, o
         transition={{ duration: 0.25 }}
         className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md flex flex-col justify-between p-4 sm:p-8 select-none"
         onClick={onClose}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       >
         {/* TOP BAR */}
         <div className="w-full flex items-center justify-between z-10 text-white" onClick={(e) => e.stopPropagation()}>
@@ -81,12 +115,13 @@ export const LightboxModal = ({ isOpen, currentIndex, images, onClose, onPrev, o
           </button>
         </div>
 
-        {/* BOTTOM CAPTION BAR (MOBILE) */}
-        {currentImg.caption && (
-          <div className="sm:hidden text-center text-xs text-neutral-400 py-1" onClick={(e) => e.stopPropagation()}>
-            {currentImg.caption}
-          </div>
-        )}
+        {/* BOTTOM CAPTION BAR + SWIPE HINT (MOBILE) */}
+        <div className="sm:hidden text-center space-y-1.5" onClick={(e) => e.stopPropagation()}>
+          {currentImg.caption && (
+            <p className="text-xs text-neutral-400">{currentImg.caption}</p>
+          )}
+          <p className="text-[10px] text-neutral-700 font-mono tracking-widest uppercase">← swipe →</p>
+        </div>
       </motion.div>
     </AnimatePresence>
   );

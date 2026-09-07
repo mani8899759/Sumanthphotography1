@@ -1,0 +1,86 @@
+[
+  {
+    "id": "cel-1",
+    "src": "/assets/celebrations/RF6A7667_KOMMU_DANCE.jpg",
+    "ratio": "landscape",
+    "orientation": "landscape",
+    "aspectRatio": 1.5,
+    "width": 5760,
+    "height": 3840,
+    "caption": "Kommu Koya Tribal Dancers — Morning Procession",
+    "categoryName": "OTHER CELEBRATIONS",
+    "alt": "Other Celebrations — Kommu Koya Tribal Dancers Morning Procession"
+  },
+  {
+    "id": "cel-2",
+    "src": "/assets/celebrations/04.jpg",
+    "ratio": "landscape",
+    "orientation": "landscape",
+    "aspectRatio": 1.5,
+    "width": 2400,
+    "height": 1600,
+    "caption": "Holi Gulal Celebration — Lambadi Festival",
+    "categoryName": "OTHER CELEBRATIONS",
+    "alt": "Other Celebrations — Holi Gulal Celebration Lambadi Festival"
+  },
+  {
+    "id": "cel-3",
+    "src": "/assets/celebrations/RF6A5904_BROTHERS.jpg",
+    "ratio": "landscape",
+    "orientation": "landscape",
+    "aspectRatio": 1.5,
+    "width": 5760,
+    "height": 3840,
+    "caption": "Brothers at Play — Mountain River Stream",
+    "categoryName": "OTHER CELEBRATIONS",
+    "alt": "Other Celebrations — Brothers at Play Mountain River Stream"
+  },
+  {
+    "id": "cel-4",
+    "src": "/assets/celebrations/RF6A7322_COCK_FIGHT.jpg",
+    "ratio": "landscape",
+    "orientation": "landscape",
+    "aspectRatio": 1.5,
+    "width": 5760,
+    "height": 3840,
+    "caption": "Traditional Village Harvest Festival — Air Action",
+    "categoryName": "OTHER CELEBRATIONS",
+    "alt": "Other Celebrations — Traditional Village Harvest Festival Air Action"
+  },
+  {
+    "id": "cel-5",
+    "src": "/assets/celebrations/RF6A2233.jpg",
+    "ratio": "landscape",
+    "orientation": "landscape",
+    "aspectRatio": 1.5,
+    "width": 5760,
+    "height": 3840,
+    "caption": "Early Morning Pot Bearer — Forest Path",
+    "categoryName": "OTHER CELEBRATIONS",
+    "alt": "Other Celebrations — Early Morning Pot Bearer Forest Path"
+  },
+  {
+    "id": "cel-6",
+    "src": "/assets/celebrations/RF6A1780.jpg",
+    "ratio": "landscape",
+    "orientation": "landscape",
+    "aspectRatio": 1.5,
+    "width": 5760,
+    "height": 3840,
+    "caption": "Village Well Gathering — Morning Ritual",
+    "categoryName": "OTHER CELEBRATIONS",
+    "alt": "Other Celebrations — Village Well Gathering Morning Ritual"
+  },
+  {
+    "id": "cel-7",
+    "src": "/assets/celebrations/RF6A1756.jpg",
+    "ratio": "landscape",
+    "orientation": "landscape",
+    "aspectRatio": 1.5,
+    "width": 5760,
+    "height": 3840,
+    "caption": "Golden Hour Journey — Rural Horizon",
+    "categoryName": "OTHER CELEBRATIONS",
+    "alt": "Other Celebrations — Golden Hour Journey Rural Horizon"
+  }
+]

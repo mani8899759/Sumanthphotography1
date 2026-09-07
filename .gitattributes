@@ -1,11 +1,10 @@
-*.webp filter=lfs diff=lfs merge=lfs -text
-*.jpg filter=lfs diff=lfs merge=lfs -text
-*.jpeg filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text
-*.JPEG filter=lfs diff=lfs merge=lfs -text
-*.mp4 filter=lfs diff=lfs merge=lfs -text
-*.avif filter=lfs diff=lfs merge=lfs -text
-*.gif filter=lfs diff=lfs merge=lfs -text
-*.JPG filter=lfs diff=lfs merge=lfs -text
-*.PNG filter=lfs diff=lfs merge=lfs -text
-*.MP4 filter=lfs diff=lfs merge=lfs -text
+# Production public web assets are tracked directly as binary files (bypassing LFS pointer conversion)
+# so automated build environments (Vercel, Netlify, Cloudflare Pages, GitHub Pages) always deploy real image binaries.
+public/** !filter !diff !merge
+
+# Git LFS tracking for raw repository archives outside public/
+Engagemnt/** filter=lfs diff=lfs merge=lfs -text
+Events/** filter=lfs diff=lfs merge=lfs -text
+Pre Wedding/** filter=lfs diff=lfs merge=lfs -text
+Wedding/** filter=lfs diff=lfs merge=lfs -text
+"other celeb"/** filter=lfs diff=lfs merge=lfs -text

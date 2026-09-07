@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/validate_images.cjs && vite build",
+    "validate:images": "node scripts/validate_images.cjs",
     "lint": "oxlint",
     "preview": "vite preview"
   },
