@@ -92,6 +92,7 @@ export const siteContent = {
   hero: {
     image: "/assets/hero_model.jpg",
     mobileImage: "/assets/mobile_hero.jpg",
+    video: "/assets/video_project_11.mp4",
     headlineLine1: "Commercial",
     headlineLine2: "Photography",
     headlineLine3: "Studio",

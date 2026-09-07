@@ -29,15 +29,16 @@ export const HeroSection = () => {
           </ImageReveal>
         </div>
 
-        {/* RIGHT COLUMN: Video Player — hidden on mobile, visible on desktop (lg+) */}
+        {/* RIGHT COLUMN: Video Player — Video Project 11 (Square 1:1 aspect ratio) */}
         <div className="lg:col-span-5 bg-white text-black hidden lg:flex items-center justify-center p-6 sm:p-8 lg:p-10 w-full">
           <div className="w-full max-w-[440px] aspect-square relative overflow-hidden bg-white flex items-center justify-center">
             <video
-              src="/assets/hero_video.mp4"
+              src={siteContent.hero.video || "/assets/video_project_11.mp4"}
               autoPlay
               muted
+              loop
               playsInline
-              className="w-full h-full object-cover object-center select-none pointer-events-none bg-white"
+              className="w-full h-full object-contain object-center select-none pointer-events-none bg-white"
             />
           </div>
         </div>
