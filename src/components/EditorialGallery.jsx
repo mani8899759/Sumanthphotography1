@@ -108,23 +108,23 @@ export const EditorialGallery = ({ images = [] }) => {
                   delay: (idx % 3) * 0.08,
                   ease: [0.16, 1, 0.3, 1]
                 }}
-                className={`${spanInfo.colSpan} relative group overflow-hidden bg-neutral-900 cursor-pointer w-full`}
+                className={`${spanInfo.colSpan} relative group overflow-hidden bg-neutral-950 cursor-pointer w-full flex items-center justify-center rounded-xl`}
                 style={{ aspectRatio: `${naturalRatio}` }}
                 onMouseEnter={() => setCursorHovered(true)}
                 onMouseLeave={() => setCursorHovered(false)}
                 onClick={() => handleOpenLightbox(idx)}
               >
-                {/* High-Fidelity Photograph */}
+                {/* High-Fidelity Photograph — 100% Complete Full Image View (Zero Cropping) */}
                 <img
                   src={item.src}
                   alt={item.alt || item.caption || `Photograph ${idx + 1}`}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+                  className="w-full h-full object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                 />
 
                 {/* Minimal Subtle Metadata Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-white pointer-events-none">
                   <span className="text-[10px] font-mono tracking-widest text-neutral-300 uppercase block mb-1">
                     {item.categoryName || 'EVENTS'} · FRAME {String(idx + 1).padStart(2, '0')} OF {images.length}
                   </span>
