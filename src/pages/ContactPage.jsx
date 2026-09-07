@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { siteContent } from '../config/siteContent';
+import { siteContent, contactInfo } from '../config/siteContent';
 import { ScrollReveal } from '../components/ScrollReveal';
 import { PageTransition } from '../components/PageTransition';
 
@@ -60,8 +60,8 @@ export const ContactPage = () => {
             <ScrollReveal delay={0.08} className="space-y-2">
               <h3 className="text-xs font-semibold uppercase tracking-widest text-neutral-400">TELEPHONE</h3>
               <p className="text-sm font-bold text-black">
-                <a href={`tel:${contact.phone.replace(/[^0-9+]/g, '')}`} className="hover:underline">
-                  {contact.phone}
+                <a href={contactInfo.phoneHref} className="hover:underline">
+                  {contactInfo.phone}
                 </a>
               </p>
             </ScrollReveal>
@@ -79,7 +79,7 @@ export const ContactPage = () => {
               <h3 className="text-xs font-semibold uppercase tracking-widest text-neutral-400">SOCIAL CONNECTIONS</h3>
               <div className="flex items-center gap-4">
                 <a
-                  href="https://instagram.com"
+                  href={contactInfo.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 border border-neutral-300 flex items-center justify-center text-black hover:border-black transition-colors"
@@ -92,7 +92,7 @@ export const ContactPage = () => {
                   </svg>
                 </a>
                 <a
-                  href={`https://wa.me/${contact.phone.replace(/[^0-9]/g, '')}`}
+                  href={contactInfo.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 border border-neutral-300 flex items-center justify-center text-black hover:border-black transition-colors"

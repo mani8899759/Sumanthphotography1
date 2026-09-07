@@ -75,6 +75,15 @@ const maternityCaptions = [
   "Timeless Fine-Art Maternity Portrait"
 ];
 
+// Central official contact configuration
+export const contactInfo = {
+  phone: "+91 94918 18015",
+  phoneHref: "tel:+919491818015",
+  whatsapp: "https://wa.me/919491818015",
+  instagram: "https://www.instagram.com/sumanth__photography07/",
+  fullInstagram: "https://www.instagram.com/sumanth__photography07/?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==",
+};
+
 export const siteContent = {
   businessName: "SUMANTH PHOTOGRAPHY",
   tagline: "Fine art & documentary photography studio based in Hyderabad, India.",
@@ -216,7 +225,10 @@ export const siteContent = {
     heroTitleLine2: "something meaningful.",
     subheading: "Tell us about your celebration, session, or project and we'll get back to you with availability and next steps.",
     studio: "Hyderabad, India",
-    phone: "+91 94918 18015",
+    phone: contactInfo.phone,
+    phoneHref: contactInfo.phoneHref,
+    whatsapp: contactInfo.whatsapp,
+    instagram: contactInfo.instagram,
     email: "hello@sumanthphotography.com",
     eventTypes: [
       "Wedding",
@@ -233,7 +245,10 @@ export const siteContent = {
     brandName: "SUMANTH PHOTOGRAPHY",
     tagline: "Fine art & documentary photography studio based in Hyderabad, India.",
     location: "Hyderabad, India",
-    phone: "+91 94918 18015",
+    phone: contactInfo.phone,
+    phoneHref: contactInfo.phoneHref,
+    whatsapp: contactInfo.whatsapp,
+    instagram: contactInfo.instagram,
     email: "hello@sumanthphotography.com",
     copyright: "© 2026 SUMANTH PHOTOGRAPHY. ALL RIGHTS RESERVED. HYDERABAD · INDIA",
     links: [

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { siteContent, getActiveNavLinks } from '../config/siteContent';
+import { siteContent, getActiveNavLinks, contactInfo } from '../config/siteContent';
 
 export const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -160,7 +160,7 @@ export const Header = () => {
                   BUILD YOUR QUOTE →
                 </NavLink>
                 <a
-                  href={`https://wa.me/${siteContent.contact?.phone?.replace(/[^0-9]/g, '') || '919491818015'}`}
+                  href={contactInfo.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full py-3 border border-neutral-800 text-neutral-300 text-xs font-semibold uppercase tracking-widest hover:border-neutral-500 hover:text-white transition-colors"

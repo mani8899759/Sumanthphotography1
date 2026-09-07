@@ -18,8 +18,9 @@ export const brandConfig = {
   heroImage: '/assets/wedding_hero.jpg',
   contactEmail: 'hello@sumanthphotography.com',
   phone: '+91 94918 18015',
+  phoneHref: 'tel:+919491818015',
   location: 'Hyderabad, India',
-  instagram: 'https://instagram.com',
+  instagram: 'https://www.instagram.com/sumanth__photography07/',
   whatsapp: 'https://wa.me/919491818015',
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { siteContent, getActiveNavLinks } from '../config/siteContent';
+import { siteContent, getActiveNavLinks, contactInfo } from '../config/siteContent';
 import { ScrollReveal } from './ScrollReveal';
 
 export const Footer = () => {
@@ -33,14 +33,14 @@ export const Footer = () => {
         {/* Contact Info */}
         <ScrollReveal delay={0.1} className="flex flex-col items-center space-y-2 text-xs text-neutral-300">
           <p className="font-medium text-white">{siteContent.footer.location}</p>
-          <p>Phone: <a href={`tel:${siteContent.footer.phone.replace(/[^0-9+]/g, '')}`} className="hover:text-white transition-colors">{siteContent.footer.phone}</a></p>
+          <p>Phone: <a href={contactInfo.phoneHref} className="hover:text-white transition-colors">{contactInfo.phone}</a></p>
           <p>Email: <a href={`mailto:${siteContent.footer.email}`} className="hover:text-white transition-colors">{siteContent.footer.email}</a></p>
 
           {/* Social Minimal Line Icons */}
           <div className="flex items-center justify-center gap-4 pt-3">
             {/* Instagram Icon */}
             <a
-              href="https://instagram.com"
+              href={contactInfo.instagram}
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-neutral-500 transition-colors"
@@ -55,7 +55,7 @@ export const Footer = () => {
 
             {/* WhatsApp Icon */}
             <a
-              href={`https://wa.me/${siteContent.footer.phone.replace(/[^0-9]/g, '')}`}
+              href={contactInfo.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-white hover:border-neutral-500 transition-colors"
