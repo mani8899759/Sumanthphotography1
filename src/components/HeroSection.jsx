@@ -7,8 +7,19 @@ export const HeroSection = () => {
     <section id="home" className="w-full bg-white text-black overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[480px] md:min-h-[540px] lg:min-h-[600px] w-full items-center">
 
-        {/* LEFT COLUMN: Editorial Photography */}
-        <div className="lg:col-span-7 relative w-full h-[380px] sm:h-[480px] lg:h-auto overflow-hidden bg-neutral-100">
+        {/* MOBILE HERO IMAGE ONLY: Appears on mobile screens (< 640px) */}
+        <div className="block sm:hidden relative w-full h-auto aspect-[602/1024] overflow-hidden bg-white">
+          <ImageReveal className="w-full h-full">
+            <img
+              src={siteContent.hero.mobileImage || '/assets/mobile_hero.jpg'}
+              alt="Sumanth Photography Mobile Hero"
+              className="w-full h-full object-contain object-center select-none"
+            />
+          </ImageReveal>
+        </div>
+
+        {/* DESKTOP/LAPTOP/TABLET HERO: Appears on sm+ (>= 640px) — 100% Untouched Original */}
+        <div className="hidden sm:block lg:col-span-7 relative w-full h-[480px] lg:h-auto overflow-hidden bg-neutral-100">
           <ImageReveal className="w-full h-full">
             <img
               src={siteContent.hero.image}
