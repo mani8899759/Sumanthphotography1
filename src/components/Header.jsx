@@ -61,13 +61,20 @@ export const Header = () => {
       <header className="md:hidden sticky top-0 z-50 w-full bg-black/95 backdrop-blur-md border-b border-neutral-900">
         <div className="flex items-center justify-between px-4 py-3">
           {/* Logo / Brand */}
-          <NavLink to="/" className="flex flex-col leading-none">
-            <span className="text-white text-[11px] font-extrabold tracking-[0.22em] uppercase">
-              SUMANTH
-            </span>
-            <span className="text-neutral-400 text-[8px] font-semibold tracking-[0.3em] uppercase">
-              PHOTOGRAPHY
-            </span>
+          <NavLink to="/" className="flex items-center gap-2.5 focus:outline-none">
+            <img
+              src="/assets/logo_mobile.png"
+              alt="Sumanth Photography Logo"
+              className="w-10 h-10 object-contain block select-none"
+            />
+            <div className="flex flex-col leading-none">
+              <span className="text-white text-[11px] font-extrabold tracking-[0.22em] uppercase">
+                SUMANTH
+              </span>
+              <span className="text-neutral-400 text-[8px] font-semibold tracking-[0.3em] uppercase">
+                PHOTOGRAPHY
+              </span>
+            </div>
           </NavLink>
 
           {/* Three-dot menu button */}
