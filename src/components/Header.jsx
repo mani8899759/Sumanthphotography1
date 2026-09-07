@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { siteContent } from '../config/siteContent';
+import { siteContent, getActiveNavLinks } from '../config/siteContent';
 
 export const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const location = useLocation();
+
+  const navLinks = getActiveNavLinks();
 
   // Close drawer on route change
   useEffect(() => {
@@ -29,7 +31,7 @@ export const Header = () => {
         <div className="container mx-auto px-4 flex items-center justify-center">
           {/* MINIMAL NAVIGATION MENU — PLAIN COMPACT HEADER */}
           <nav className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8 flex-wrap">
-            {siteContent.navLinks.map((link) => {
+            {navLinks.map((link) => {
               const isQuote = link.path === '/build-your-quote';
               return (
                 <NavLink
@@ -122,7 +124,7 @@ export const Header = () => {
 
               {/* Nav Links */}
               <nav className="flex-1 overflow-y-auto py-6 px-6 space-y-1">
-                {siteContent.navLinks.map((link, idx) => {
+                {navLinks.map((link, idx) => {
                   const isQuote = link.path === '/build-your-quote';
                   if (isQuote) return null; // Quote gets its own CTA below
                   return (

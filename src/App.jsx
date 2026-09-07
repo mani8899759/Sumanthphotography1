@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { siteFeatures } from './config/siteFeatures';
 
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -38,9 +39,19 @@ const AnimatedRoutes = () => {
         <Route path="/weddings" element={<WeddingPage />} />
         <Route path="/weddings/:subId" element={<CategoryGalleryPage />} />
 
-        {/* Baby/Maternity Hub & 3 Subcategory Galleries */}
-        <Route path="/baby-maternity" element={<BabyBumpPage />} />
-        <Route path="/baby-maternity/:subId" element={<CategoryGalleryPage />} />
+        {/* Baby/Maternity Hub & 3 Subcategory Galleries (Protected by siteFeatures.babyBumpShots) */}
+        <Route
+          path="/baby-maternity"
+          element={
+            siteFeatures.babyBumpShots ? <BabyBumpPage /> : <Navigate to="/" replace />
+          }
+        />
+        <Route
+          path="/baby-maternity/:subId"
+          element={
+            siteFeatures.babyBumpShots ? <CategoryGalleryPage /> : <Navigate to="/" replace />
+          }
+        />
 
         {/* Others Hub & 4 Subcategory Galleries */}
         <Route path="/birthdays-events" element={<OthersPage />} />

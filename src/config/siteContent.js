@@ -1,3 +1,5 @@
+import { siteFeatures } from './siteFeatures';
+
 // Helper generator to build narrative 30-item curated datasets with specific 4:5 portrait and 16:9 landscape ratios
 const generateGalleryItems = (baseCategory, imagePool, captions) => {
   const items = [];
@@ -242,3 +244,14 @@ export const siteContent = {
     ]
   }
 };
+
+// Dynamic helper returning active nav links based on siteFeatures configuration
+export const getActiveNavLinks = () => {
+  return siteContent.navLinks.filter((link) => {
+    if (link.path === '/baby-maternity' && !siteFeatures.babyBumpShots) {
+      return false;
+    }
+    return true;
+  });
+};
+

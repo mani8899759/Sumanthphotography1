@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { siteContent } from '../config/siteContent';
+import { siteContent, getActiveNavLinks } from '../config/siteContent';
 import { ScrollReveal } from './ScrollReveal';
 
 export const Footer = () => {
+  const navLinks = getActiveNavLinks();
+
   return (
     <footer className="bg-black text-white pt-16 pb-20 px-6 w-full border-t border-neutral-900">
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-10">
@@ -17,7 +19,7 @@ export const Footer = () => {
 
         {/* Global Navigation Links */}
         <ScrollReveal delay={0.05} className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-          {siteContent.navLinks.map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
