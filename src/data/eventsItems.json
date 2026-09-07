@@ -658,29 +658,5 @@
     "caption": "Event Closing — Cinematic Frame",
     "categoryName": "EVENTS",
     "alt": "Events photography — Event Closing — Cinematic Frame"
-  },
-  {
-    "id": "ev-56",
-    "src": "/assets/events/ev_sd_79298.jpg",
-    "ratio": "landscape",
-    "orientation": "landscape",
-    "aspectRatio": 1.5,
-    "width": 5760,
-    "height": 3840,
-    "caption": "Stage Finale — Grand Performance",
-    "categoryName": "EVENTS",
-    "alt": "Events photography — Stage Finale — Grand Performance"
-  },
-  {
-    "id": "ev-57",
-    "src": "/assets/events/ev_sd_79306.jpg",
-    "ratio": "landscape",
-    "orientation": "landscape",
-    "aspectRatio": 1.5,
-    "width": 5760,
-    "height": 3840,
-    "caption": "Closing Heirloom Memory — Live Event",
-    "categoryName": "EVENTS",
-    "alt": "Events photography — Closing Heirloom Memory — Live Event"
   }
 ]
