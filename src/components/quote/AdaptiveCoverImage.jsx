@@ -37,7 +37,6 @@ export const AdaptiveCoverImage = ({
       className={`relative overflow-hidden rounded-3xl w-full bg-gray-900 ${className}`}
       style={{
         aspectRatio: `${aspectRatio}`,
-        maxHeight: '75vh',
         boxShadow: '0 12px 40px rgba(0,0,0,0.12)',
         ...style,
       }}
@@ -47,7 +46,7 @@ export const AdaptiveCoverImage = ({
         src={src}
         alt={alt}
         onLoad={handleImageLoad}
-        className={`w-full h-full object-contain object-center transition-all duration-700 hover:scale-[1.01] ${
+        className={`w-full h-full object-cover object-center transition-all duration-700 hover:scale-[1.01] ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
         loading="eager"
