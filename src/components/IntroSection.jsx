@@ -4,8 +4,8 @@ import { ScrollReveal } from './ScrollReveal';
 
 export const IntroSection = () => {
   return (
-    <section className="bg-black text-white py-16 sm:py-24 lg:py-28 px-6 sm:px-12 w-full border-t border-neutral-900">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="bg-black text-white pt-16 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 w-full border-t border-neutral-900 overflow-hidden">
+      <div className="max-w-4xl mx-auto text-center px-6 sm:px-12">
 
         {/* Short Introductory Statement */}
         <ScrollReveal>
@@ -21,19 +21,19 @@ export const IntroSection = () => {
           </p>
         </ScrollReveal>
 
-        {/* Dedicated About Section Feature Image — Preserved exact landscape ratio across all devices */}
-        <ScrollReveal delay={0.25}>
-          <div className="w-full max-w-4xl mx-auto overflow-hidden rounded-sm bg-neutral-950 border border-neutral-900 shadow-2xl group cursor-pointer">
-            <img
-              src={siteContent.aboutFeatureImage || "/assets/about_feature.jpg"}
-              alt="Sumanth Photography — About Feature"
-              className="w-full h-auto block object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02] select-none"
-              loading="eager"
-            />
-          </div>
-        </ScrollReveal>
-
       </div>
+
+      {/* Dedicated About Section Feature Image — Full Edge-to-Edge Screen Width */}
+      <ScrollReveal delay={0.25} className="w-full mt-4">
+        <div className="w-full overflow-hidden bg-neutral-950 border-y border-neutral-900 shadow-2xl group cursor-pointer">
+          <img
+            src={siteContent.aboutFeatureImage || "/assets/about_feature.jpg"}
+            alt="Sumanth Photography — About Feature"
+            className="w-full h-auto block object-cover sm:object-contain max-h-[85vh] transition-transform duration-700 ease-out group-hover:scale-[1.01] select-none mx-auto"
+            loading="eager"
+          />
+        </div>
+      </ScrollReveal>
     </section>
   );
 };

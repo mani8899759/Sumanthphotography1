@@ -132,12 +132,12 @@ export const AboutPage = () => {
       <section className="w-full bg-white text-black overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[580px] lg:min-h-[680px] w-full">
 
-          <div className="lg:col-span-7 relative w-full overflow-hidden bg-neutral-950 flex items-center justify-center p-4 sm:p-8 lg:p-12">
+          <div className="lg:col-span-7 relative w-full overflow-hidden bg-neutral-950 flex items-center justify-center">
             <ImageReveal className="w-full h-full flex items-center justify-center">
               <img
                 src={about.featureImage || about.heroImage}
                 alt="About Sumanth Photography"
-                className="w-full h-auto block object-contain max-h-[650px] select-none rounded-sm shadow-xl transition-transform duration-700 ease-out hover:scale-[1.02]"
+                className="w-full h-full block object-cover select-none transition-transform duration-700 ease-out hover:scale-[1.02] min-h-[450px] lg:min-h-[680px]"
               />
             </ImageReveal>
           </div>
